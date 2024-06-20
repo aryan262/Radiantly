@@ -1,0 +1,35 @@
+:root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header {
+  background-color: transparent;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: inline;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5rem;
+}
