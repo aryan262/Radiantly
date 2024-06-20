@@ -9,6 +9,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [searchError, setSearchError] = useState('');
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +29,8 @@ const App = () => {
         setAllPokemon(allResponse.data.results);
       } catch (error) {
         console.error('Error fetching Pokémon data:', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -87,7 +90,13 @@ const App = () => {
         />
       </header>
       <div className="pokemon-container">
-        {searchResults.length > 0 ? (
+        {loading ? (
+          <div className="loading-container">
+          <div className="loading-spinner">
+            <div className="loading-text">Loading...</div>
+          </div>
+        </div>
+        ) : searchResults.length > 0 ? (
           searchResults.map((pokemon) => (
             <PokemonCard key={pokemon.id} pokemon={pokemon} />
           ))
