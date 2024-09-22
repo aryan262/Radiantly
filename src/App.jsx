@@ -96,7 +96,7 @@ const App = () => {
             <div className="loading-text">Loading...</div>
           </div>
         </div>
-        ) : searchResults.length > 0 ? (
+        ) : searchResults.length>0 ? (
           searchResults.map((pokemon) => (
             <PokemonCard key={pokemon.id} pokemon={pokemon} />
           ))

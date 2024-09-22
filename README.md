@@ -1,1 +1,1 @@
-This is a simple React application that allows users to search for Pokémon using the Pokémon API (PokeAPI). The app displays Pokémon data in cards with images and includes a search functionality that filters Pokémon based on the search term.
+This is a simple React application that allows users to search for Pokémon using the Pokémon API (PokeAPI).The app displays Pokémon data in cards with images and includes a search functionality that filters Pokémon based on the search term.
